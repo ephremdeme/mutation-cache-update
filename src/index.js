@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useMutation } from "@apollo/react-hooks";
+import { AppLoading } from "./loading";
 
 export const useAddMutation = (add_query, read_query, m_method, m_name) => {
   var a = m_method;
@@ -24,3 +25,5 @@ export const useAddMutation = (add_query, read_query, m_method, m_name) => {
   };
   return [submit, { loading, error, data }];
 };
+
+export const Loading = AppLoading;

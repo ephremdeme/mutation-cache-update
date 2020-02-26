@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAddMutation } from 'use-add-mutation-update'
+import { useAddMutation, Loading } from 'use-add-mutation-update'
 import { gql } from 'apollo-boost';
 
 const GET_TODOS = gql`

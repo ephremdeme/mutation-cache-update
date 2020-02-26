@@ -1,6 +1,6 @@
 {
   "name": "use-add-mutation-update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Apollo client add mutation with cache update using simple react hook",
   "author": "ephremdeme",
   "license": "MIT",
