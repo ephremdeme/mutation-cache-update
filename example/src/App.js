@@ -1,8 +1,8 @@
 import React from 'react'
-import { useMyHook } from 'use-add-mutation-update'
+import { useAddMutation } from 'use-add-mutation-update'
 
 const App = () => {
-  const example = useMyHook()
+  const example = useAddMutation()
   return (
     <div>
       {example}
