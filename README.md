@@ -12,24 +12,56 @@ npm install --save use-add-mutation-update
 ## Usage
 
 ```jsx
-import React, { Component } from "react";
+import React from 'react'
+import { useAddMutation } from 'use-add-mutation-update'
+import { gql } from 'apollo-boost';
 
-import { useAddMutation } from "use-add-mutation-update";
+const GET_TODOS = gql`
+  query GetTodos {
+    todos
+  }
+`;
 
-const Example = () => {
-  const [addNews, { error, loading, data }] = useAddMutation(
-    ADD_NEWS,
-    GET_NEWS,
-    "add_news"/*mutation method name */,
-    "get_news" /*query method name */
-  );
+const ADD_TODO = gql`
+  mutation AddTodo($type: String!) {
+    addTodo(type: $type) {
+      id
+      type
+    }
+  }
+`;
 
-  addNews({
-      variables: value
-    }) //So simple
+const App = () => {
+  const [addTodo, { error, loading, data }] = useAddMutation(
+    ADD_TODO,
+    GET_TODOS,
+    'add_todo'/* mutation method name */,
+    'get_todos' /* query method name */
+  )
+  let input
+  return (
+    <div>
+      <div>
+        <form
+          onSubmit={e => {
+            e.preventDefault()
+            addTodo({ variables: { type: input.value } })
+            input.value = ''
+          }}
+        >
+          <input
+            ref={node => {
+              input = node
+            }}
+          />
+          <button type='submit'>Add Todo</button>
+        </form>
+      </div>
+    </div>
+  )
+}
+export default App
 
-  return <div>{example}</div>;
-};
 ```
 
 ## License

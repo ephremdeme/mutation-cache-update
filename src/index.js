@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useMutation } from "@apollo/react-hooks";
 
 export const useAddMutation = (add_query, read_query, m_method, m_name) => {
   var a = m_method;
