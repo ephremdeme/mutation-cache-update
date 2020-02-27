@@ -1,19 +1,19 @@
 # use-add-mutation-update
->Very simple and small hook for managing  Apollo client add mutation with cache update 
+>Very simple and small hook that can be used for updating local the cache while performing Apollo client add and delete mutation.  
 
 [![NPM](https://img.shields.io/npm/v/use-add-mutation-update.svg)](https://www.npmjs.com/package/use-add-mutation-update) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save use-add-mutation-update
+npm install --save mutation-cache-update
 ```
 
 ## Usage
 
 ```jsx
 import React from 'react'
-import { useAddMutation, Loading } from 'use-add-mutation-update'
+import { useAddMutation, Loading } from 'mutation-cache-update'
 import { gql } from 'apollo-boost';
 
 const GET_TODOS = gql`
@@ -38,6 +38,9 @@ const App = () => {
     'add_todo'/* mutation method name */,
     'get_todos' /* query method name */
   )
+
+  
+  if(loading) return <Loading>
   let input
   return (
     <div>
@@ -62,6 +65,30 @@ const App = () => {
 }
 export default App
 
+```
+
+> to perform delete mutation
+
+``` jsx
+import { useDeleteMutation, Loading } from 'mutation-cache-update'
+
+  const [deleteTodo, { error, loading, data }] = useDeleteMutation(
+      DELETE_TODOS,
+      GET_TODOS,
+      'delete_todos'/* mutation method name */,
+      'get_todos' /* query method name */
+    )
+
+    deleteTodo({
+      variables : id
+    })
+
+```
+
+> Loading indicator spinner
+
+``` jsx
+  if(loading) return <Loading/>
 ```
 
 ## License
