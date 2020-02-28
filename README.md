@@ -1,7 +1,7 @@
-# use-add-mutation-update
+# mutation-cache-update
 >Very simple and small hook that can be used for updating local the cache while performing Apollo client add and delete mutation.  
 
-[![NPM](https://img.shields.io/npm/v/use-add-mutation-update.svg)](https://www.npmjs.com/package/use-add-mutation-update) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/mutation-cache-update.svg)](https://www.npmjs.com/package/mutation-cache-update) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 

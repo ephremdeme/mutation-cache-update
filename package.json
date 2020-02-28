@@ -1,6 +1,6 @@
 {
   "name": "mutation-cache-update",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "perform Apollo client add and delete mutation with local cache update using simple react hook",
   "author": "ephremdeme",
   "license": "MIT",
