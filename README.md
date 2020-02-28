@@ -91,6 +91,9 @@ import { useDeleteMutation, Loading } from 'mutation-cache-update'
   if(loading) return <Loading/>
 ```
 
+## Contribution
+>Any suggestion is welcome.
+
 ## License
 
 MIT © [ephremdeme](https://github.com/ephremdeme)
