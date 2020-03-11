@@ -1,10 +1,11 @@
 {
   "name": "mutation-cache-update",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "perform Apollo client add and delete mutation with local cache update using simple react hook",
   "author": "ephremdeme",
   "license": "MIT",
-  "repository": "ephremdeme/use-add-mutation-update",
+  "repository": "ephremdeme/mutation-cache-update",
+  "keywords": ["apollo-client", "graphql", "apollo-hooks"],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
